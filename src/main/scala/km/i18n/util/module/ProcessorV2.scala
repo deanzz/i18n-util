@@ -76,7 +76,7 @@ class ProcessorV2(conf: I18nConf) extends BaseProcessor {
             //attributeStr = attributeStr.replaceFirst(s.replace("+","\\+"), attriKey)
             val target = "\"" + s.replace("\\n","\\\\n").replace("+","\\+").replace("(","\\(").replace(")","\\)").
               replace("*","\\*").replace("[", "\\[").replace("]", "\\]").replace(".", "\\.")/*.replace("-", "\\-")*/ + "\""
-            attributeStr = attributeStr.replaceAll(target, "\"_" + key + "_\"")
+            attributeStr = attributeStr.replaceAll(target, "\"" + key + "\"")
         }
         nodeTypeAttributeMap += (m.nodeType -> attributeStr)
         nodeTypeAttributeTplBuilder.append(s"${m.nodeType} = $attributeStr").append("\n")

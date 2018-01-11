@@ -23,10 +23,10 @@ object Main {
     //moduleProcessor.export
     //moduleProcessor.importI18n
 
-    //val moduleProcessorV2 = new ProcessorV2(conf)
-    //moduleProcessorV2.extractAll()
-    //moduleProcessorV2.importAttributeTpl()
-    i18nTest
+    val moduleProcessorV2 = new ProcessorV2(conf)
+    moduleProcessorV2.extractAll()
+    moduleProcessorV2.importAttributeTpl()
+    //i18nTest
   }
 
   def i18nTest = {
